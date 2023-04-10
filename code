@@ -1,0 +1,26 @@
+import time
+
+def display_character_info(name, character_type, health, strength):
+    print("Name: " + name)
+    print("Character Type: " + character_type)
+    print("HEALTH: " + str(health))
+    print("STRENGTH: " + str(strength))
+    print("\nMay your name go down in Legend...\n")
+
+# Loop for creating and displaying characters
+while True:
+    print("=== Character Creation ===")
+    name = input("Enter your Legend name: ")
+    character_type = input("Enter Character Type (Human, Elf, Wizard, Orc): ")
+    health = int(input("Enter HEALTH: "))
+    strength = int(input("Enter STRENGTH: "))
+
+    display_character_info(name, character_type, health, strength)
+
+    again = input("Create another character? (Yes/No): ")
+    if again.lower() != "yes":
+        print("Thank you for using the character creation tool!")
+        break
+
+    print("Next character in 3 seconds...")
+    time.sleep(3)
